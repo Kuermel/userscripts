@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Next/Forward Page for heise select
-// @version      0.1
+// @version      0.2
 // @description  Press Left/Right arrow key for previous/next page
 // @author       Kuermel
 // @match        https://www.heise.de/select/*
