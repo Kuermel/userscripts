@@ -12,19 +12,13 @@ function checkKey(e) {
 
     e = e || window.event;
 
-    if (e.keyCode == '38') {
-        // up arrow
-    }
-    else if (e.keyCode == '40') {
-        // down arrow
-    }
-    else if (e.keyCode == '37') {
+    if (e.keyCode == '37' || e.keyCode == '65') {
 	document.getElementsByClassName("nav__link nav__link--prev")[0].click();
-       // left arrow
+       // left arrow or a
     }
-    else if (e.keyCode == '39') {
+    else if (e.keyCode == '39' || e.keyCode == '68') {
 	document.getElementsByClassName("nav__link nav__link--next")[0].click();
-       // right arrow
+       // right arrow or d
     }
 
 }
