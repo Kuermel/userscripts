@@ -8,16 +8,17 @@
 (function() {
     function remove_lock_layer(){
     'use strict';
-  document.documentElement.classList.remove("overlay-open");
-        
-    var elements = document.querySelectorAll("[data-component="AdblockLayer"]");
-        while(elements.length > 0){
-             elements[0].parentNode.removeChild(elements[0]);
-        }
+
+        document.documentElement.classList.remove("overlay-open");
+        var elements = document.querySelectorAll('[data-component="AdblockLayer"]');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].remove();
+        };
+
 
 //setTimeout(remove_lock_layer, 5000);
 
 }
-setTimeout(remove_lock_layer, 5000);
+setTimeout(remove_lock_layer, 1000);
 // remove_lock_layer();
 }());
