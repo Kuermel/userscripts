@@ -12,8 +12,13 @@
         for (var i = 0; i < elements.length; i++) {
             elements[i].remove();
         };
-        document.documentElement.classList.remove("overlay-open");
+        (function myLoop(i) {
+            setTimeout(function() {
+                document.documentElement.classList.remove("overlay-open");
+                if (--i) myLoop(i);
+            }, 1000)
+        })(10);
+
 }
-setTimeout(remove_lock_layer, 2000);
-// remove_lock_layer();
+setTimeout(remove_lock_layer, 1000);
 }());
