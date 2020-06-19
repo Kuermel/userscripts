@@ -8,8 +8,8 @@
 (function() {
     function remove_lock_layer(){
     'use strict';
-
-  document.body.style.overflowY = "visible";
+  document.documentElement.classList.remove("overlay-open");
+        
     var elements = document.querySelectorAll("[data-component="AdblockLayer"]");
         while(elements.length > 0){
              elements[0].parentNode.removeChild(elements[0]);
