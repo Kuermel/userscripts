@@ -8,17 +8,12 @@
 (function() {
     function remove_lock_layer(){
     'use strict';
-
-        document.documentElement.classList.remove("overlay-open");
         var elements = document.querySelectorAll('[data-component="AdblockLayer"]');
         for (var i = 0; i < elements.length; i++) {
             elements[i].remove();
         };
-
-
-//setTimeout(remove_lock_layer, 5000);
-
+        document.documentElement.classList.remove("overlay-open");
 }
-setTimeout(remove_lock_layer, 1000);
+setTimeout(remove_lock_layer, 2000);
 // remove_lock_layer();
 }());
